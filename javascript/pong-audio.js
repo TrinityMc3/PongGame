@@ -8,7 +8,7 @@ class soundFile {
   constructor(file, deferPlay) {
     //this.deferPlay = false;
     this.player = new Tone.Player({
-      url: "./sounds/" + file,
+    url: "./sounds/" + file,
       loop: false,
       autostart: false
     }).toMaster();
@@ -52,7 +52,7 @@ soundArray.push(paddleSound);
 export var scoreSound = new soundFile("tap-percussive.mp3");
 soundArray.push(scoreSound);
 
-export var ambientSound = new soundFile("Cute Café.mp3");
+export var ambientSound = new soundFile("cute_cafe.mp3");
 soundArray.push(ambientSound);
 ambientSound.player.loop = true; //turn on looping
 ambientSound.player.volume.value = -20; //turn down volume
